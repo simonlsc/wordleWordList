@@ -1,5 +1,5 @@
 # wordleWordList
-a work list with 5 characters english word
+a word list with 5 characters long english words
 
 with an editor support regular expression search, this text file word list can become your wordle cheat sheet
 
