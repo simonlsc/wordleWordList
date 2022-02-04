@@ -1,20 +1,13 @@
-f = open('wordleWordList.txt', "r")
-
-pos=[
-    dict(zip(map(chr, range(ord('a'), ord('z')+1)), [0] *26)),
-    dict(zip(map(chr, range(ord('a'), ord('z')+1)), [0] *26)),
-    dict(zip(map(chr, range(ord('a'), ord('z')+1)), [0] *26)),
-    dict(zip(map(chr, range(ord('a'), ord('z')+1)), [0] *26)),
-    dict(zip(map(chr, range(ord('a'), ord('z')+1)), [0] *26))
-]
-
+# initialize a dictionary of a-z with count per alphabet reset to 0
 total=dict(zip(map(chr, range(ord('a'), ord('z')+1)), [0] *26))
+# initialize 5 dictionaries, one per position
+pos=[total.copy(),total.copy(),total.copy(),total.copy(),total.copy()]
 
-for x in f:
-    for p in range(5):
-        pos[p][x[p]] += 1
-        total[x[p]] += 1
-
+with open('D:\\Users\\simon\\Documents\\wordleWordList.txt', "r") as f:
+    for x in f:
+        for p in range(5):
+            pos[p][x[p]] += 1
+            total[x[p]] += 1
 #print(pos)
 # print out rank by frequency per position 1-5
 print("rank by frequency per position 1-5")
