@@ -23,3 +23,5 @@ for p in range(5):
 # overall statistic
 print("total count per character")
 print(dict(sorted(total.items(), key=lambda item: item[1],reverse=True)))
+
+f.close()
