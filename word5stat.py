@@ -17,8 +17,6 @@ for p in range(5):
 print("total count per character")
 print(dict(sorted(total.items(), key=lambda item: item[1],reverse=True)))
 
-f.close()
-
 word={}
 with open('wordleWordList.txt', "r") as f:
     for x in f:
