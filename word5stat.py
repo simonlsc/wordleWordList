@@ -25,3 +25,15 @@ print("total count per character")
 print(dict(sorted(total.items(), key=lambda item: item[1],reverse=True)))
 
 f.close()
+
+word={}
+with open('wordleWordList.txt', "r") as f:
+    for x in f:
+        score=0
+        for p in range(5):
+            score += pos[p][x[p]]
+        word[x[:5]]=score
+
+scoreDict=dict(sorted(word.items(), key=lambda item: item[1],reverse=True))
+#print out top 20 score, base on frequence per positions
+print(list(scoreDict)[0:20])
