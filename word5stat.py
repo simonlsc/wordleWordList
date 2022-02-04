@@ -35,5 +35,5 @@ with open('wordleWordList.txt', "r") as f:
         word[x[:5]]=score
 
 scoreDict=dict(sorted(word.items(), key=lambda item: item[1],reverse=True))
-#print out top 20 score, base on frequence per positions
-print(list(scoreDict)[0:20])
+#print out top 20 scores, base on frequence per positions
+print(list(scoreDict.items())[0:20])
